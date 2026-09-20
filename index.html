@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风流岁月之活色生香完整版 - 经典都市情感小说在线阅读</title>
+    <meta name="description" content="本站提供《风流岁月之活色生香完整版》全集在线阅读，这是一部经典的都市情感题材小说，讲述主角在复杂社会关系中跌宕起伏的人生经历与情感纠葛。内容精彩，剧情紧凑，适合喜欢现实题材和人物心理描写的读者。">
+    <meta name="keywords" content="风流岁月之活色生香完整版,风流岁月之活色生香,都市小说,在线阅读,小说下载">
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-box input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        .search-box button {
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid white;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Book Info */
+        .book-intro {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+        }
+
+        .book-header {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .book-cover {
+            width: 180px;
+            height: 250px;
+            background-color: #eee;
+            border-radius: 4px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .book-meta h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-tags {
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-right: 0.5rem;
+        }
+
+        .book-stats {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .book-stats strong {
+            color: var(--text-color);
+        }
+
+        .chapter-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            padding: 1rem 1.5rem;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list ul {
+        }
+
+        .chapter-list li {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list li:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-list a {
+            color: var(--text-color);
+        }
+
+        .chapter-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .chapter-list .chapter-date {
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 0.8rem;
+        }
+
+        .recommend-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .recommend-list li:last-child {
+            border-bottom: none;
+        }
+
+        .recommend-list a {
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .recommend-list span {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Reader Area */
+        .reader-container {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .reader-container h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .reader-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .reader-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #bdc3c7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .book-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .book-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .reader-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <span>📚</span> 纵横书库
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">书架</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索书名、作者...">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <h1>风流岁月之活色生香完整版</h1>
+        <p>经典都市情感小说，讲述主角在名利场中的沉浮与情感抉择。真实细腻的笔触，引人入胜的剧情，为您提供沉浸式的阅读体验。</p>
+        <div class="hero-actions">
+            <button class="btn btn-primary">开始阅读</button>
+            <button class="btn btn-secondary">加入书架</button>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+    <div class="main-grid">
+        <!-- Left Column: Content -->
+        <section>
+            <div class="book-intro">
+                <div class="book-header">
+                    <img src="https://picsum.photos/seed/bookcover/180/250" alt="风流岁月之活色生香封面" class="book-cover">
+                    <div class="book-meta">
+                        <h2>风流岁月之活色生香</h2>
+                        <div class="book-tags">
+                            <span class="tag">都市</span>
+                            <span class="tag">情感</span>
+                            <span class="tag">现实</span>
+                            <span class="tag">连载中</span>
+                        </div>
+                        <p>作者：<strong>佚名</strong> | 类型：<strong>都市生活</strong> | 状态：<strong>已完结</strong></p>
+                        <div class="book-stats">
+                            <div>字数：<strong>120万</strong></div>
+                            <div>收藏：<strong>50万+</strong></div>
+                            <div>推荐：<strong>8.8分</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-description">
+                    <h3>作品简介</h3>
+                    <p>《风流岁月之活色生香》是一部描写现代都市生活的现实主义小说。故事以第一人称视角展开，细腻刻画了主角林风在职场打拼、情感纠葛以及面对社会变迁时的内心挣扎。小说没有脱离现实的矫揉造作，而是通过一个个生动的人物形象，展现了当代人在追求物质与精神满足之间的矛盾。书中既有职场商战的惊心动魄，也有市井生活的烟火气息，更有关于人性、爱情与责任的深刻探讨。</p>
+                    <br>
+                    <p>本书情节跌宕起伏，人物性格鲜明。作者通过大量的细节描写和心理刻画，让读者能够身临其境地感受到主角的喜怒哀乐。如果您喜欢看那种能够引发共鸣、贴近生活的小说，那么这部作品绝对不容错过。</p>
+                </div>
+            </div>
+
+            <div class="chapter-list">
+                <div class="chapter-header">
+                    <span>最新章节目录</span>
+                    <a href="#" style="font-size:0.9rem; color:var(--primary-color)">查看更多 &rarr;</a>
+                </div>
+                <ul>
+                    <li><a href="#">第1024章 尾声：岁月静好</a> <span class="chapter-date">今天 10:23</span></li>
+                    <li><a href="#">第1023章 回首</a> <span class="chapter-date">昨天 22:15</span></li>
+                    <li><a href="#">第1022章 聚会</a> <span class="chapter-date">10-24</span></li>
+                    <li><a href="#">第1021章 意外的消息</a> <span class="chapter-date">10-23</span></li>
+                    <li><a href="#">第1020章 释怀</a> <span class="chapter-date">10-22</span></li>
+                    <li><a href="#">第1019章 新的开始</a> <span class="chapter-date">10-21</span></li>
+                    <li><a href="#">第1018章 暖意</a> <span class="chapter-date">10-20</span></li>
+                    <li><a href="#">第1017章 危机</a> <span class="chapter-date">10-19</span></li>
+                    <li><a href="#">第1016章 对峙</a> <span class="chapter-date">10-18</span></li>
+                    <li><a href="#">第1015章 背叛</a> <span class="chapter-date">10-17</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>热门推荐</h3>
+                <ul class="recommend-list">
+                    <li>
+                        <a href="#">重生之都市修仙</a>
+                        <span>都市修仙</span>
+                    </li>
+                    <li>
+                        <a href="#">超级兵王</a>
+                        <span>军事热血</span>
+                    </li>
+                    <li>
+                        <a href="#">神级龙卫</a>
+                        <span>都市异能</span>
+                    </li>
+                    <li>
+                        <a href="#">最强弃少</a>
+                        <span>都市重生</span>
+                    </li>
+                    <li>
+                        <a href="#">我的美女总裁老婆</a>
+                        <span>都市言情</span>
+                    </li>
+                    <li>
+                        <a href="#">九龙归一诀</a>
+                        <span>玄幻</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>分类导航</h3>
+                <ul class="recommend-list">
+                    <li><a href="#">都市异能</a></li>
+                    <li><a href="#">历史军事</a></li>
+                    <li><a href="#">修真仙侠</a></li>
+                    <li><a href="#">科幻未来</a></li>
+                    <li><a href="#">悬疑推理</a></li>
+                    <li><a href="#">同人小说</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>阅读工具</h3>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn btn-secondary" style="padding:0.5rem 1rem; font-size:0.9rem;">A+</button>
+                    <button class="btn btn-secondary" style="padding:0.5rem 1rem; font-size:0.9rem;">A-</button>
+                    <button class="btn btn-secondary" style="padding:0.5rem 1rem; font-size:0.9rem;">日间</button>
+                    <button class="btn btn-secondary" style="padding:0.5rem 1rem; font-size:0.9rem;">夜间</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Reader Area -->
+    <section class="reader-container">
+        <h2>第1024章 尾声：岁月静好</h2>
+        <div class="reader-content">
+            <p>时光荏苒，转眼间又是数年过去。林风站在自家的露台上，看着远处城市的灯火，心中涌起一股难以言喻的感慨。曾经那个在名利场中摸爬滚打、为了生存而不得不妥协的年轻人，如今已成为了这座城市里令人尊敬的企业家。</p>
+            <p>但他并没有忘记初心。每当夜深人静的时候，他总会想起那些陪伴他走过风雨的人。想起那个在雨中为他撑伞的女孩，想起那个在背后默默支持他的兄弟，想起那些曾经给予他帮助的陌生人。</p>
+            <p>“风哥，发什么呆呢？酒都凉了。”一个熟悉的声音打断了他的思绪。林风回过头，看到好友张强端着两杯酒走了过来。</p>
+            <p>林风接过酒杯，笑了笑：“没，只是觉得时间过得太快了。当年我们一无所有，现在虽然有了些成就，但总觉得少了点什么。”</p>
+            <p>张强拍了拍他的肩膀：“少什么？有家有业，有儿有女，兄弟在身边。这还不够吗？”</p>
+            <p>林风沉默了片刻，点了点头：“你说得对。人生就是这样，在不断的得到与失去中寻找平衡。现在的我，很知足。”</p>
+            <p>两人举起酒杯，一饮而尽。清冽的酒液入喉，化作一股暖流，流遍全身。窗外的月光洒在他们的身上，显得格外温柔。</p>
+            <p>这就是《风流岁月之活色生香》的结局。没有惊天动地的反转，也没有狗血的误会。只有岁月的沉淀和对生活的热爱。希望每一个读到这里的读者，都能在自己的生活中，找到那份属于自己的“活色生香”。</p>
+        </div>
+        <div class="reader-controls">
+            <button class="btn btn-secondary" style="background:#eee; color:#333;">上一章</button>
+            <button class="btn btn-primary">下一章</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>Copyright © 2023 纵横书库 All Rights Reserved.</p>
+        <p>本站所有小说内容均来自互联网，仅供学习交流使用，请支持正版。</p>
+        <p><a href="#">免责声明</a> | <a href="#">联系我们</a> | <a href="#">隐私政策</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
