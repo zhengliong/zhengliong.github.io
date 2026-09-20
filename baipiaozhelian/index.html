@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="白嫖者联盟 - 全球优质免费资源聚合平台。提供正版软件下载、免费电子书、在线影视观看、实用工具及开源项目获取指南。拒绝套路，教你如何合法、高效地获取所需资源。">
+    <meta name="keywords" content="白嫖者联盟,免费资源,软件下载,电子书,在线观看,开源项目,实用工具">
+    <title>白嫖者联盟-全球优质免费资源聚合与获取指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #10b981;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: var(--bg-color);
+            border-radius: 20px;
+            padding: 4px 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 4px;
+            width: 200px;
+            font-size: 0.9rem;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-sub);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Resource Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: box-shadow 0.2s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            background-color: #e2e8f0;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            background: #eff6ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            margin-top: auto;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: white;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .guide-sidebar h3 {
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        .guide-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .guide-content {
+            background: var(--bg-color);
+            padding: 24px;
+            border-radius: var(--radius-md);
+        }
+
+        .guide-content h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .guide-content p {
+            margin-bottom: 12px;
+            color: var(--text-sub);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8fafc;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            display: none;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            padding-top: 16px;
+            border-top-color: var(--border-color);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+            
+            .search-bar input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+                <span>白嫖者联盟</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#software">软件工具</a></li>
+                    <li><a href="#media">影音娱乐</a></li>
+                    <li><a href="#learning">学习资源</a></li>
+                    <li><a href="#guide">省钱攻略</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索免费资源...">
+                <button aria-label="搜索">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>拒绝套路，合法白嫖</h1>
+                <p>聚合全球优质免费资源，涵盖正版软件、电子书、开源项目及实用工具。教你如何利用合法途径获取高价值服务，降低生活与工作成本。</p>
+                <div class="cta-group">
+                    <a href="#software" class="btn btn-primary">探索免费软件</a>
+                    <a href="#guide" class="btn btn-outline">阅读省钱指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Section -->
+        <section id="software">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">必备免费软件</h2>
+                    <a href="#" class="section-link">查看全部 &rarr;</a>
+                </div>
+                <div class="grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/office/400/250" alt="WPS Office" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">办公效率</span>
+                            <h3 class="card-title">WPS Office</h3>
+                            <p class="card-desc">全功能办公套件，免费版支持文档、表格、演示文稿的创建与编辑，兼容微软格式。</p>
+                            <div class="card-footer">
+                                <span class="card-meta">更新于 3天前</span>
+                                <a href="#" class="btn-primary" style="font-size:0.85rem; padding:4px 12px;">下载</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/av/400/250" alt="VLC Media Player" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">影音播放</span>
+                            <h3 class="card-title">VLC Media Player</h3>
+                            <p class="card-desc">开源跨平台媒体播放器，支持几乎所有视频音频格式，无需安装解码器。</p>
+                            <div class="card-footer">
+                                <span class="card-meta">更新于 1周前</span>
+                                <a href="#" class="btn-primary" style="font-size:0.85rem; padding:4px 12px;">下载</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/obs/400/250" alt="OBS Studio" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">直播推流</span>
+                            <h3 class="card-title">OBS Studio</h3>
+                            <p class="card-desc">免费开源的直播流软件，功能强大，适合游戏直播、屏幕录制及虚拟摄像头搭建。</p>
+                            <div class="card-footer">
+                                <span class="card-meta">更新于 2天前</span>
+                                <a href="#" class="btn-primary" style="font-size:0.85rem; padding:4px 12px;">下载</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/7z/400/250" alt="7-Zip" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">压缩解压</span>
+                            <h3 class="card-title">7-Zip</h3>
+                            <p class="card-desc">高压缩比的开源压缩软件，支持多种格式，无广告，无捆绑，纯净高效。</p>
+                            <div class="card-footer">
+                                <span class="card-meta">更新于 5天前</span>
+                                <a href="#" class="btn-primary" style="font-size:0.85rem; padding:4px 12px;">下载</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">白嫖攻略指南</h2>
+                </div>
+                <div class="guide-container">
+                    <aside class="guide-sidebar">
+                        <h3>资源分类</h3>
+                        <ul class="guide-list">
+                            <li><a href="#">正版软件订阅计划</a></li>
+                            <li><a href="#">在线免费工具箱</a></li>
+                            <li><a href="#">电子书与公开课</a></li>
+                            <li><a href="#">开源替代方案</a></li>
+                            <li><a href="#">云存储与网盘</a></li>
+                        </ul>
+                    </aside>
+                    <div class="guide-content">
+                        <h3>如何合法利用开源项目替代付费软件</h3>
+                        <p>在许多情况下，开源软件已经能够完美替代商业软件。例如，使用 <strong>GIMP</strong> 替代 Photoshop 进行修图，使用 <strong>Krita</strong> 进行绘画。这些软件虽然起步门槛稍高，但完全免费且功能强大。</p>
+                        <p>此外，微软提供的 <strong>Visual Studio Code</strong> 是目前全球最流行的代码编辑器，免费且功能丰富，足以支撑绝大多数开发者的日常工作。</p>
+                        <p>关注我们，获取更多关于“开源替代方案”的详细对比和下载链接。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning & Media Section -->
+        <section id="media">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">学习与娱乐</h2>
+                    <a href="#" class="section-link">更多资源 &rarr;</a>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/library/400/250" alt="Open Library" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">电子书</span>
+                            <h3 class="card-title">Open Library</h3>
+                            <p class="card-desc">互联网最大的免费电子书图书馆，拥有超过一百万本可借阅的公共领域书籍。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/tech/400/250" alt="MDN Web Docs" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">学习资料</span>
+                            <h3 class="card-title">MDN Web Docs</h3>
+                            <p class="card-desc">Mozilla官方维护的Web开发技术文档，前端开发者的必备百科全书，完全免费。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/music/400/250" alt="Free Music Archive" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">音乐</span>
+                            <h3 class="card-title">Free Music Archive</h3>
+                            <p class="card-desc">提供无版权音乐的下载，适合视频制作、播客和商业项目使用。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/clip/400/250" alt="Pixabay" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">素材</span>
+                            <h3 class="card-title">Pixabay</h3>
+                            <p class="card-desc">拥有超过百万张免费图片、插画和矢量图，可商用，无版权限制。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            “白嫖”是否意味着使用盗版软件？
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="faq-answer">
+                            不完全是。本站提倡的是“开源替代”和“正版免费计划”。我们推荐的是完全合法的免费开源软件、官方提供的免费增值服务以及公有领域的资源。我们反对侵犯版权的盗版行为，旨在帮助用户找到更经济、合法的解决方案。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            这些资源安全吗？
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="faq-answer">
+                            我们提供的软件均来自官方网站或可信的开源社区镜像站。为了您的安全，建议在下载和安装前使用杀毒软件进行扫描，并尽量从官方网站获取安装包。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            如何获取最新的免费资源更新？
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="faq-answer">
+                            您可以关注本站的“省钱攻略”栏目，或者订阅我们的邮件列表，我们将定期推送最新的免费软件发布信息和优惠活动。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem;">白嫖者联盟致力于为用户提供客观、实用的免费资源推荐与获取指南，帮助大家以最低的成本满足工作与生活的需求。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">办公软件</a></li>
+                        <li><a href="#">设计工具</a></li>
+                        <li><a href="#">影音娱乐</a></li>
+                        <li><a href="#">学习资料</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">开源中国</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Microsoft Store</a></li>
+                        <li><a href="#">Adobe Creative Cloud</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 白嫖者联盟. 保留所有权利. 本站内容仅供学习与交流使用.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
